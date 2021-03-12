@@ -10,7 +10,7 @@ ExecStart=/usr/local/bin/polkadot \
          --rpc-methods=Unsafe \
          --chain={{ chain }} \
          --rpc-port {{ api_rpc_port }} \
-         --database paritydb
+         --database paritydb-experimental
 
 [Install]
 WantedBy=multi-user.target
