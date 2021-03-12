@@ -47,14 +47,6 @@ These are provided in the format of:
 ### Other
 - chain: "kusama"
 
-
-Example Playbook
-----------------
-
-    - hosts: servers
-      roles:
-         - { role: insight_w3f.polkadot_base, x: 42 }
-
 License
 -------
 
@@ -63,4 +55,4 @@ Apache 2.0
 Author Information
 ------------------
 
-Maintained by [Richard Mah](https://github.com/shinyfoil) for [Insight Infrastructure](https://github.com/insight-infrastructure)
+Maintained by [Richard Mah](https://github.com/shinyfoil) at [Geometry Labs](https://github.com/geometry-labs)
