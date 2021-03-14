@@ -21,7 +21,22 @@ jobs:
       - test
     runs-on: ubuntu-latest
     steps:
-      - name: galaxy
-        uses: robertdebock/galaxy-action@1.1.1
+      - run: echo ::set-env name=REPOSITORY_NAME::$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $2}' | sed -e "s/:refs//")
+        shell: bash
+      
+      - run: echo $GITHUB_REPOSITORY
+        shell: bash
+
+#      - name: galaxy
+#        uses: robertdebock/galaxy-action@1.1.1
+#        with:
+#          galaxy_api_key: ${{ secrets.ansible_galaxy_api_key }}
+
+#      - uses: 0x022b/galaxy-role-import-action@v1
+#        with:
+#          galaxy_api_key: ${{ secrets.ansible_galaxy_api_key }}
+
+      - name: Release Ansible Role to Galaxy
+        uses: hspaans/ansible-galaxy-action@v0.2.7
         with:
-          galaxy_api_key: ${{ secrets.ansible_galaxy_api_key }}
+          api_key: ${{ secrets.ansible_galaxy_api_key }}
