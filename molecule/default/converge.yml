@@ -4,4 +4,4 @@
   tasks:
     - name: "Include polkadot-base"
       include_role:
-        name: "polkadot-base"
+        name: base
