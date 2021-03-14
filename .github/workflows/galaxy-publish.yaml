@@ -21,12 +21,6 @@ jobs:
       - test
     runs-on: ubuntu-latest
     steps:
-      - run: echo ::set-env name=REPOSITORY_NAME::$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $2}' | sed -e "s/:refs//")
-        shell: bash
-      
-      - run: echo $GITHUB_REPOSITORY
-        shell: bash
-
 #      - name: galaxy
 #        uses: robertdebock/galaxy-action@1.1.1
 #        with:
