@@ -5,6 +5,7 @@
     phc_api_rpc_port: "{{ api_rpc_port }}"
     phc_health_check_port: "{{ health_check_port }}"
     phc_chain: "{{ chain }}"
+    phc_skip_health_check: "{{ skip_health_check }}"
   when: health_check_enabled
 - import_tasks: install-node-exporter.yml
   when: node_exporter_enabled
