@@ -1,6 +1,6 @@
 ---
 - import_role:
-    name: insight_w3f.polkadot_health_check
+    name: geometrylabs.polkadot_health_check
   vars:
     phc_api_rpc_port: "{{ api_rpc_port }}"
     phc_health_check_port: "{{ health_check_port }}"
