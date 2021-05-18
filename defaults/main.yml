@@ -10,6 +10,8 @@ consul_dns_port: 8600
 consul_api_port: 8500
 consul_serf_lan_port: 8301
 consul_serf_wan_port: 8302
+consul_https_port: 8501
+consul_grpc_port: 8502
 
 # enable flags
 node_exporter_enabled: true

@@ -58,6 +58,12 @@
     - consul_enabled|bool
     - not ufw_status_result.stdout is search(consul_api_port ~ "/tcp.*ALLOW IN.*Anywhere")
 
+- name: open consul HTTPS API ports
+  command: ufw allow {{ consul_https_port }}
+  when:
+    - consul_enabled|bool
+    - not ufw_status_result.stdout is search(consul_https_port ~ ".*ALLOW IN.*Anywhere")
+
 - name: open consul LAN serf ports
   command: ufw allow {{ consul_serf_lan_port }}
   when:
@@ -69,6 +75,12 @@
   when:
     - consul_enabled|bool
     - not ufw_status_result.stdout is search(consul_serf_wan_port ~ ".*ALLOW IN.*Anywhere")
+
+- name: open consul gRPC ports
+  command: ufw allow {{ consul_grpc_port }}
+  when:
+    - consul_enabled|bool
+    - not ufw_status_result.stdout is search(consul_grpc_port ~ ".*ALLOW IN.*Anywhere")
 
 - name: enable firewall
   shell: |

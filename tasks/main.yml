@@ -1,5 +1,6 @@
 ---
-- import_role:
+- name: Run health check role
+  import_role:
     name: geometrylabs.polkadot_health_check
   vars:
     phc_api_rpc_port: "{{ api_rpc_port }}"
