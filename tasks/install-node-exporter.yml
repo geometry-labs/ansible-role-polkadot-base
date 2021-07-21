@@ -40,10 +40,18 @@
 - name: create nginx config
   template:
     src: nginx.conf.j2
-    dest: /etc/nginx/nginx.conf
+    dest: /etc/nginx/sites-available/node_exporter
     owner: root
     group: root
     mode: 0600
+
+- name: symlink config
+  file:
+    src: /etc/nginx/sites-available/node_exporter
+    dest: /etc/nginx/sites-enabled/node_exporter
+    owner: root
+    group: root
+    state: link
 
 - name: start nginx service
   systemd:
