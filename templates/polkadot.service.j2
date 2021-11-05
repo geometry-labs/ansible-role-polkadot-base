@@ -6,6 +6,7 @@ User=polkadot
 Group=polkadot
 ExecStart=/usr/local/bin/polkadot \
          --name polkadot-dummy \
+         --base-path=/data \
          --validator \
          --rpc-methods=Unsafe \
          --chain={{ chain }} \

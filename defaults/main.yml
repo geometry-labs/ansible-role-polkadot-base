@@ -21,12 +21,12 @@ consul_enabled: true
 # node exporter vars
 node_exporter_user: prometheus
 node_exporter_password: node_exporter
-node_exporter_binary_url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-amd64.tar.gz
-node_exporter_binary_checksum: 'sha256:b2503fd932f85f4e5baf161268854bf5d22001869b84f00fd2d1f57b51b72424'
+node_exporter_binary_url: https://github.com/prometheus/node_exporter/releases/download/v1.2.2/node_exporter-1.2.2.linux-amd64.tar.gz
+node_exporter_binary_checksum: 'sha256:344bd4c0bbd66ff78f14486ec48b89c248139cdd485e992583ea30e89e0e5390'
 
 # client vars
-polkadot_binary_url: "https://github.com/w3f/polkadot/releases/download/v0.8.23/polkadot"
-polkadot_binary_checksum: "sha256:cdf31d39ed54e66489d1afe74ed7549d5bcdf8ff479759e8fc476d17d069901e"
+polkadot_binary_url: "https://github.com/paritytech/polkadot/releases/download/v0.9.12/polkadot"
+polkadot_binary_checksum: "sha256:4a06a043e8fec42e09384a7ebab4331d138101ee55846af356e08d38982d767a"
 polkadot_restart_enabled: false
 polkadot_restart_minute: "0"
 polkadot_restart_hour: "0"
