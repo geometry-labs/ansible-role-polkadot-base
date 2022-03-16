@@ -68,6 +68,7 @@
   systemd:
     name: "{{ chain_stub }}.service"
     state: started
+    daemon_reload: yes
   changed_when: false
   when: polkadot_service_running.stdout == "no"
 
