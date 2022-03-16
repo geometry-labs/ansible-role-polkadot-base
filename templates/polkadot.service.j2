@@ -8,6 +8,9 @@ ExecStart=/usr/local/bin/polkadot \
          --name polkadot-dummy \
          --base-path=/data \
          --validator \
+{% if polkadot_additional_validator_flags is defined and polkadot_additional_validator_flags|length %}
+         {{ polkadot_additional_validator_flags }} \
+{% endif %}
          --rpc-methods=Unsafe \
          --chain={{ chain }} \
          --rpc-port {{ api_rpc_port }} \
